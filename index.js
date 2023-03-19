@@ -13,19 +13,3 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname + "/views/", "index.html"));
 });
-
-app.get("/profile", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "profile.html"));
-});
-
-app.get("/math", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "math.html"));
-});
-
-app.get("/faq", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "faq.html"));
-});
-
-app.get("/terms", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "terms.html"));
-});

@@ -1,95 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/signup.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jest Smart Home</title>
+    <title>COMP2136 Signup</title>
   </head>
   <body>
     <main>
-      <h1>Jest Smart Home</h1>
-      <div>
-        <h3 id="date_display"></h3>
-      </div>
+      <h1>Signup for COMP2136</h1>
       <form>
         <div>
-          <label>Notifications</label>
-          <input type="checkbox" id="notifications" checked />
+          <label>Name</label
+          ><input id="first_name" type="text" placeholder="First Name" />
+          <input id="last_name" type="text" placeholder="Last Name" />
+          <span id="name_error" class="error-span"></span>
         </div>
         <div>
-          <label>Power Mode</label>
+          <label>Email</label
+          ><input id="email" type="text" placeholder="nando@goat.es" />
         </div>
         <div>
-          <div>
-            <label for="off">Off</label>
-            <input type="radio" id="off" name="lighting_mode" value="Off" />
-          </div>
-          <div>
-            <label for="away">Away</label>
-            <input type="radio" id="css" name="lighting_mode" value="Away" />
-          </div>
-          <div>
-            <label for="eco">Economy</label>
-            <input
-              type="radio"
-              id="eco"
-              name="lighting_mode"
-              value="Eco"
-              
-            />
-          </div>
-          <div>
-            <label for="full">Full</label>
-            <input type="radio" id="full" name="lighting_mode" value="Full" />
-          </div>
+          <label>Confirm Email</label
+          ><input id="confirm_email" type="text" placeholder="nando@goat.es" />
+          <span id="email_error" class="error-span"></span>
         </div>
         <div>
-          <label>Location</label>
-          <input
-            type="text"
-            id="location"
-            placeholder="Postal Code"
-            value="L7W 4T8"
-          /><span id="location_error" class="error-span"></span>
+          <label>Date of Birth</label
+          ><input id="dob" type="date" value="1991-02-07" /><span
+            id="dob_error"
+            class="error-span"
+          ></span>
+        </div>
+        <div><label></label>
+          <input type="checkbox" id="terms" checked />
+          <label>I agree to the Terms and Conditions</label>
+
         </div>
         <div>
-          <label>Temperature</label>
-          <input
-            type="number"
-            id="temperature"
-            name="temperature"
-            min="5"
-            max="30"
-            step="0.5"
-            value="21"
-          /><span id="temperature_error" class="error-span"></span>
-        </div>
-        <div>
-          <label></label>
-          <input type="submit" value="Update" id="update_settings" />
-          <input type="reset" value="Reset" id="reset_form" />
+          <label></label
+          ><input type="submit" id="signup" value="Signup" /><input
+            id="reset_form"
+            type="reset"
+          />
         </div>
       </form>
-      <h2>Current Settings</h2>
+
       <div>
-        <label>Notifications&nbsp;</label>
-        <span class="current-setting" id="setting_notifications">On</span>
-      </div>
-      <div>
-        <label>Lighting Mode&nbsp;</label>
-        <span class="current-setting" id="setting_lighting_mode">Eco</span>
-      </div>
-      <div>
-        <label>Location&nbsp;</label
-        ><span class="current-setting" id="setting_location">L7W 4T8</span>
-      </div>
-      <div>
-        <label>Temperature&nbsp;</label
-        ><span class="current-setting" id="setting_temperature">21</span
-        ><span>°C</span>
+        <div>
+          <span id="success_message"></span> 
+        </div>
       </div>
     </main>
-    <script src="js/dashboard.js"></script>
+    <script src="js/signup.js"></script>
   </body>
 </html>
